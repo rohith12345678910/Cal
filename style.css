@@ -1,0 +1,124 @@
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: hsl(0, 0%, 95%);
+    padding: 100px;
+    margin-top: 10px;
+}
+
+#Calculator {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 3rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+/* button:active{
+    background-color: hsl(0, 0%, 50%);
+} */
+
+.operator-btn {
+    background-color: hsl(35, 100%, 55%);
+}
+
+.operator-btn:hover {
+    background-color: hsl(35, 100%, 65%);
+}
+
+.operator-btn:active {
+    background-color: hsl(35, 100%, 75%);
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 20px;
+        margin-top: 100px;
+    }
+    #Calculator {
+        max-width: 100%;
+        border-radius: 0;
+    }
+    #keys {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        padding: 15px;
+    }
+    button {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    #display {
+        font-size: 2rem;
+        padding: 10px;
+    }
+    @media (max-width: 260px) and (min-width: 232px) {
+        body {
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #Calculator {
+            max-width: 100%;
+            border-radius: 0;
+        }
+        #keys {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+            padding: 10px;
+        }
+        button {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+        #display {
+            font-size: 1.5rem;
+            padding: 5px;
+        }
+}
+}
